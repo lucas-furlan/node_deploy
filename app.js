@@ -43,7 +43,9 @@
     })
   //mongoose
   mongoose.Promise = global.Promise;
-  mongoose.connect(process.env.DB_URL).then(() => {
+  mongoose.connect(process.env.DB_URL, {
+    useNewUrlParser: true 
+  }).then(() => {
     console.log("Conetado com sucesso")
   }).catch((err) => {
     console.log("Erro ao se conectar! "+ err)
