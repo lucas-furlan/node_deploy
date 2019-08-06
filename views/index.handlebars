@@ -1,0 +1,42 @@
+{{#if user}}
+  <div class="jumbotron">
+  <h1 class="display-4">Postagens Recentes</h1>
+  <hr class="my-2">
+</div>
+{{else}}
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao blog!</h1>
+  <p class="lead">Aqui você sempre ficará atualizado sobre as novidades de diversas áreas.</p>
+  <hr class="my-4">
+  <p>Cadastre-se abaixo, e converse com diversas pessoas sobre variados tópicos e temas.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma contta</a>
+</div>
+
+{{/if}}
+
+{{#each postagens}}
+
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title"><h3 style="text-transform: uppercase">{{titulo}}</h3></h5>
+    <p class="card-text"><p>{{descricao}}</p></p>
+    <a href="/postagem/{{slug}}" class="btn btn-primary">Leia Mais</a>
+
+    <div class="card-footer text-muted mt-2" style="background-color: white;">
+      <small>{{data}}</small>
+      <br>
+      <small>Categoria: {{categoria.nome}}</small>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+
+{{else}}
+{{/each}}

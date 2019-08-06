@@ -1,0 +1,22 @@
+{{#each postagens}}
+
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title"><h3 style="text-transform: uppercase">{{titulo}}</h3></h5>
+    <p class="card-text"><p>{{descricao}}</p></p>
+    <a href="/postagem/{{slug}}" class="btn btn-primary">Leia Mais</a>
+
+    <div class="card-footer text-muted mt-2" style="background-color: white;">
+      <small>{{data}}</small>
+      <br>
+    </div>
+  </div>
+</div>
+<br>
+<a href="/categorias" class="btn btn-secondary">Voltar</a>
+
+{{else}}
+  <h5>Nenhuma postagem!</h5><br>
+  <a href="/categorias" class="btn btn-secondary">Voltar</a>
+{{/each}}

@@ -1,0 +1,17 @@
+<h2>Usuarios cadastrados</h2>
+<h4>{{nome}}</h4>
+<hr>
+<a href="/admin/postagens/add"><button class="btn btn-primary">Nova Postagem</button></a><br>
+
+{{#each postagens}}
+  <div class="card  mt-4">
+    <div class="card-body">
+      <h4>{{nome}}</h4>
+      <a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success mt-4">Editar Categoria</button></a>
+    </div>
+
+  </div>
+{{else}}
+<br>
+<p>Nenhuma postagem registrada</p>
+{{/each}}
